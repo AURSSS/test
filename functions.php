@@ -21,7 +21,7 @@ function check_login($conn)
 		}
 	} else {
         //redirect to login
-        header("Location: login.php");
+        header("Location: index.html");
         exit();
     }
 }
@@ -84,7 +84,7 @@ function display_mycourses($conn)
 		}
 	} else{
 			//redirect to login
-			header("Location: login.php");
+			header("Location: index.html");
 			exit();
 		}
 }
@@ -128,7 +128,7 @@ function display_profile($conn)
 		}
 	} else{
 			//redirect to login
-			header("Location: login.php");
+			header("Location: index.html");
 			exit();
 		}
 }
