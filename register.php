@@ -186,7 +186,7 @@ session_start();
                       <button class="btn btn-primary w-100" name="signup" type="signup">Create Account</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="login.php">Log in</a></p>
+                      <p class="small mb-0">Already have an account? <a href="index.html">Log in</a></p>
                     </div>
                   </form>
 
