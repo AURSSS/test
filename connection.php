@@ -17,14 +17,4 @@ $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-
-
-try {
-    $conn = new PDO("mysql:host=$cleardb_server;dbname=heroku_6daa70e44adaa77", $cleardb_username, $cleardb_password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-} catch(PDOException $e) {
-    echo "Connection failed: " . $e->getMessage();
-}
 ?>
