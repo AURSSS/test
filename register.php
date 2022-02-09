@@ -64,7 +64,7 @@ session_start();
                     $stmt2->bindParam(':name', $wname);
                     $stmt2->bindParam(':wid', $wid);
                     if($stmt2->execute()){
-                      header("Location: login.php");
+                      header("Location: index.html");
                         exit();
                     } else {
                         header("Location: register.php?signup=error");
