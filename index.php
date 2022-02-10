@@ -52,7 +52,7 @@ $user_data = check_login($conn);
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="home.php" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/logo.png" alt="">
         <span class="d-none d-lg-block">Rush To Learn</span>
       </a>
@@ -287,7 +287,7 @@ $user_data = check_login($conn);
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="home.php">
+        <a class="nav-link " href="index.php">
           <i class="bi bi-grid"></i>
           <span>Home</span>
         </a>

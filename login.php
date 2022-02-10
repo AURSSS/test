@@ -6,7 +6,7 @@ session_start();
   // Check if $_SESSION or $_COOKIE already set
 if( isset($_SESSION['userid']))
 {
-  header('Location: home.php');
+  header('Location: index.php');
   exit;
 }else if( isset($_COOKIE['rememberme'] )){
   // pass the name to a var
@@ -20,7 +20,7 @@ if( isset($_SESSION['userid']))
   $count = $stmt->fetchColumn();
   if( $count > 0 ){
      $_SESSION['user_id'] = $userid; 
-     header('Location: home.php');
+     header('Location: index.php');
      exit;
   }
 }
@@ -47,7 +47,7 @@ if( isset($_SESSION['userid']))
               setcookie ("rememberme",$value,time()+ ($days * 24 * 60 * 60 * 1000));
              }
               $_SESSION['user_id'] = $result['wid'];
-                header("Location: home.php");
+                header("Location: index.php");
                   exit();
                   }
               }
@@ -105,7 +105,7 @@ if( isset($_SESSION['userid']))
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                <a href="login.php" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
                   <span class="d-none d-lg-block">Rush To Learn</span>
                 </a>

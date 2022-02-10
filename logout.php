@@ -9,5 +9,5 @@ if(isset($_SESSION['user_id']))
        setcookie ("rememberme","", time() - ($days * 24 * 60 * 60 * 1000) );
 }
 
-header("Location: index.html");
+header("Location: login.php");
 exit();

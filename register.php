@@ -7,7 +7,7 @@ session_start();
   //شوف واش مسجل ولا عندو كوكيز تاع تسجيل
   if( isset($_SESSION['userid']))
 {
-  header('Location: home.php');
+  header('Location: index.php');
   exit;
 }else if( isset($_COOKIE['rememberme'] )){
   // pass the name to a var
@@ -21,7 +21,7 @@ session_start();
   $count = $stmt->fetchColumn();
   if( $count > 0 ){
      $_SESSION['user_id'] = $userid; 
-     header('Location: home.php');
+     header('Location: index.php');
      exit;
   }
 }
@@ -64,7 +64,7 @@ session_start();
                     $stmt2->bindParam(':name', $wname);
                     $stmt2->bindParam(':wid', $wid);
                     if($stmt2->execute()){
-                      header("Location: index.html");
+                      header("Location: login.php");
                         exit();
                     } else {
                         header("Location: register.php?signup=error");
@@ -135,7 +135,7 @@ session_start();
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
+                <a href="login.php" class="logo d-flex align-items-center w-auto">
                   <img src="assets/img/logo.png" alt="">
                   <span class="d-none d-lg-block">Rush To Learn</span>
                 </a>
@@ -186,7 +186,7 @@ session_start();
                       <button class="btn btn-primary w-100" name="signup" type="signup">Create Account</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="index.html">Log in</a></p>
+                      <p class="small mb-0">Already have an account? <a href="login.php">Log in</a></p>
                     </div>
                   </form>
 
